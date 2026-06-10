@@ -1,4 +1,4 @@
-# Compliance Checklist — Botium Toys
+# Compliance Checklist — Botium Toys - Security Audit
 
 **Auditor:** Dwaine Coley
 **Date:** June 2026
