@@ -1,0 +1,53 @@
+# Compliance Checklist — Botium Toys
+
+**Auditor:** Dwaine Coley
+**Date:** June 2026
+
+---
+
+## Payment Card Industry Data Security Standard (PCI DSS)
+
+| Best Practice | Adherent | Notes |
+|---------------|----------|-------|
+| Only authorized users access credit card information | No | All employees currently have broad system access |
+| Credit card data stored in secure environment | No | No access controls or secure storage in place |
+| Data encryption implemented | No | No encryption on stored or transmitted data |
+| Secure password management policies adopted | No | No password policy or management system exists |
+
+---
+
+## General Data Protection Regulation (GDPR)
+
+| Best Practice | Adherent | Notes |
+|---------------|----------|-------|
+| EU customer data kept private and secured | No | No access controls or encryption protecting EU data |
+| 72-hour breach notification plan in place | Yes | Plan exists to notify EU customers within 72 hours |
+| Data properly classified and inventoried | No | No data classification system in place |
+| Privacy policies enforced | Yes | Privacy policies are documented and maintained |
+
+---
+
+## System and Organizations Controls (SOC 1/2)
+
+| Best Practice | Adherent | Notes |
+|---------------|----------|-------|
+| User access policies established | No | No formal access control policies exist |
+| Sensitive PII/SPII is confidential | No | No controls restricting access to sensitive data |
+| Data integrity validated | Yes | Data is consistent, complete, and accurate |
+| Data available to authorized users | Yes | Authorized users can access data as needed |
+
+---
+
+## Compliance Summary
+
+| Standard | Adherent | Not Adherent |
+|----------|----------|--------------|
+| PCI DSS | 0 | 4 |
+| GDPR | 2 | 2 |
+| SOC 1/2 | 2 | 2 |
+| **Total** | **4** | **8** |
+
+Botium Toys is non-compliant with PCI DSS across all four assessed
+best practices. GDPR and SOC 1/2 show partial compliance. Immediate
+remediation is required to avoid regulatory penalties and reduce
+risk to customer data.
