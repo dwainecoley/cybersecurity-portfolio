@@ -1,12 +1,6 @@
-# Cybersecurity Portfolio — Dwaine Coley
+# Cybersecurity Portfolio - Dwaine Coley
 
-**Cybersecurity & GRC | Remote**
-
-Junior cybersecurity professional building hands-on experience across GRC, blue team operations, and security fundamentals. Currently pursuing Google Cybersecurity Certificate, CompTIA Security+, and GRC Mastery.
-
----
-
-## 🔐 Projects
+## 🔐 Projects & Practical Labs
 
 | Project | Description | Status |
 |---------|-------------|--------|
