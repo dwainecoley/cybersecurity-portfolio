@@ -1,4 +1,4 @@
-# Cybersecurity GRC & Cloud Security
+## Dwaine's GRC & Cloud Security Portfolio
 
 ## 🔐 Projects & Practical Labs
 
