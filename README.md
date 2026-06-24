@@ -1,4 +1,4 @@
-# Cybersecurity Portfolio - Dwaine Coley
+# Cybersecurity GRC & Cloud Security
 
 ## 🔐 Projects & Practical Labs
 
