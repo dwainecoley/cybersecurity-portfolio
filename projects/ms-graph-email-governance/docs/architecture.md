@@ -23,7 +23,7 @@ Access to Azure begins at portal.azure.com. Authentication is tied to the Micros
 A new App Registration is created inside Azure Active Directory (now Microsoft Entra ID). This gives the Python script its own identity — separate from the user — with only the permissions it needs.
 
 **Key decisions made here:**
-- **Name:** `outlook-governanace-script`
+- **Name:** `outlook-governance-script`
 - **Supported account types:** Single tenant only (My organization only)
 - **Redirect URI:** None — not needed for script-based auth
 
