@@ -1,11 +1,11 @@
 # Email Governance – Microsoft Graph API
 
-**Author:** Dwaine Coley
-**Language:** Python
-**API:** Microsoft Graph API (v1.0)
-**Auth:** OAuth 2.0 — Azure AD App Registration (Least Privilege)
-**Status:** 🔄 In Progress
-**Started:** June 2026
+**Author:** Dwaine Coley |
+**Language:** Python |
+**API:** Microsoft Graph API (v1.0) |
+**Auth:** OAuth 2.0 — Azure AD App Registration (Least Privilege) |
+**Status:** 🔄 In Progress |
+**Started:** June 2026 |
 
 ---
 
