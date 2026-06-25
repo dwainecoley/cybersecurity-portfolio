@@ -164,7 +164,7 @@ requires a delegated (user-signed-in) token.
 
 ---
 
-### Step 3.2 — Redirect URI Error
+### Step 3.2 — Redirect URI Error & Resolution
 
 Switching to the interactive delegated flow revealed a missing redirect URI
 in the Azure app registration — `AADSTS500113`.
@@ -175,16 +175,43 @@ pre-registered destinations.
 
 ![Redirect URI Missing Error](./screenshots/14-aadsts500113-redirect-uri-missing.png)
 
+**How it was resolved:**
+
+Three changes were made to the Azure App Registration to support delegated
+authentication from a personal Microsoft account:
+
+1. **Added Redirect URIs** — Registered the following in Azure Portal under
+   Authentication → Mobile and desktop applications:
+   - `https://login.microsoftonline.com/common/oauth2/nativeclient`
+   - `https://login.live.com/oauth20_desktop.srf`
+   - `msal{client_id}://auth`
+   - `http://localhost`
+
+2. **Updated Supported Account Types** — Changed from single tenant to
+   `Any Entra ID Tenant + Personal Microsoft accounts` to allow personal
+   Hotmail/Outlook.com accounts.
+
+3. **Set `allowPublicClient: true` in Manifest** — Required to enable the
+   Device Code Flow for non-web (desktop/script) authentication scenarios.
+
+**Auth flow pivot:** Rather than the interactive browser flow, the
+**Device Code Flow** was implemented — eliminating redirect URI complexity
+entirely. The script prints a short code, the user visits
+`microsoft.com/devicelogin`, enters the code, and the delegated token
+is returned directly to the script. This is the recommended approach for
+CLI tools and automation scripts on personal accounts.
+
 ---
 
 ### Step 3.3 — Delegated Token via Device Code Flow
 
-After resolving the app registration configuration, the Device Code Flow was
-implemented — no redirect URI required. A code is printed, entered at
-`microsoft.com/devicelogin`, and the delegated token is returned.
+With the app registration correctly configured and the Device Code Flow
+implemented, authentication succeeded on the next run.
 
-The token format changed from `eyJ0eX...` (JWT) to `EwBIBM...` (Microsoft
-personal account token) — confirming the user identity is now attached.
+The token format changed from `eyJ0eX...` (JWT — application token) to
+`EwBIBM...` (Microsoft personal account token) — confirming the user
+identity is now attached to the token. This unlocked the `/me` endpoint
+and all delegated Graph API operations.
 
 ![Delegated Token Success](./screenshots/16-delegated-token-success.png)
 
